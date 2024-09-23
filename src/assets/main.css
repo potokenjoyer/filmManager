@@ -1,9 +1,10 @@
 @import './base.css';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 #app {
   max-width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
+  margin:  auto;
+  /* padding: 2rem; */
   font-weight: normal;
 }
 
@@ -16,9 +17,9 @@ a,
 }
 
 @media (hover: hover) {
-  a:hover {
+  /* a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
-  }
+  } */
 }
 
 @media (min-width: 1024px) {
@@ -28,8 +29,6 @@ a,
   }
 
   #app {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
   }
 }
