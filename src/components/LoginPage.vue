@@ -1,7 +1,7 @@
 <template>
   <div class="login-page">
     <!-- Показывать если forgotPass==true -->
-    <div class="form" v-if="forgotPass">
+    <div class="form" >
       <h1 class="logo">fWatch</h1>
       <form class="login-form" :click="checkValue">
         <el-input
@@ -9,7 +9,6 @@
           class="input-login"
           v-model="inputLogin"
         />
-
         <el-input
           v-model="inputPass"
           class="input-password"
@@ -22,7 +21,7 @@
       <div class="links-container">
         <div>
           <!-- при клике форгот пасс меняет на false (отображается 2 форма ) -->
-          <el-link type="primary" @click="forgotPass = !forgotPass" 
+          <el-link type="primary"
             >Забыли пароль?</el-link
           >
         </div>
@@ -30,34 +29,9 @@
       </div>
     </div>
     <!-- вторая форма (забыл логин) -->
-    <div class="form" v-else-if="sendRecoveryMessage">
-      <h1 class="logo">fWatch</h1>
-      <p class="recovery">Для восстановления доступа введите e-mail</p>
-      <form class="login-form" :click="checkValue">
-        <el-input
-          placeholder="Введите email"
-          class="input-login"
-          v-model="emailRecovery"
-        />
-
-        <el-button
-          type="primary"
-          class="btn-enter"
-          @click="sendRecoveryMessage = !sendRecoveryMessage"
-          >Отправить</el-button
-        >
-      </form>
-      <div class="links-container">
-        <div>
-          <el-link type="primary" @click="forgotPass = !forgotPass"
-            >Вернуться</el-link
-          >
-        </div>
-      </div>
-    </div>
 
     <!-- Третья форма, письмо отправлено -->
-    <div class="form" v-if="(sendRecoveryMessage == false)">
+    <!-- <div class="form" v-if="(sendRecoveryMessage == false)">
       <h1 class="logo">fWatch</h1>
       <p class="recovery">
         Письмо с восстановлением доступа отправлено на указанный e-mail
@@ -70,17 +44,21 @@
           >
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
-const inputPass = ref("");
-const inputLogin = ref("");
-const forgotPass = ref(true);
-const emailRecovery = ref("");
-const sendRecoveryMessage = ref(true);
+import { ref
+  
+ } from 'vue';
+const currentTab = ref('')
+
+const Tab = {
+
+}
+
+
 </script>
 
 <style>
