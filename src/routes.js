@@ -1,7 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 // import components here
-import PageMain from "./components/MainPage.vue";
-
+import LoginPage from "./components/LoginPage.vue";
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -9,7 +8,7 @@ export default createRouter({
     {
       path: "/",
       name: "pageOne",
-      component: PageMain
+      component: LoginPage,
     },
   ],
 });
