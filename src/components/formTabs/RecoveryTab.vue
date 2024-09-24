@@ -1,7 +1,7 @@
 <template>
   <div class="form">
     <h1 class="logo">fWatch</h1>
-    <p class="recovery">Для восстановления доступа введите e-mail</p>
+    <p class="recovery" style="font-size: 18px;">Для восстановления доступа введите e-mail</p>
     <form class="login-form">
       <el-input
         placeholder="Введите email"

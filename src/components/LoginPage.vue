@@ -1,11 +1,12 @@
 <template>
 <div>
+ 
   <button
        v-for="(_, tab) in tabs"
        :key="tab"
        :class="[{ active: currentTab === tab }]"
        @click="currentTab = tab, console.log(currentTab)"
-     >
+     >123
     </button>
 	  <component :is="tabs[currentTab]" class="tab"></component>
 </div>
@@ -25,6 +26,8 @@ const tabs = {
   RecoveryTab,
   ReturnTab,
 };
+
+
 
 </script>
 

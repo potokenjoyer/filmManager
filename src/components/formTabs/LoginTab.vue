@@ -1,5 +1,4 @@
 <template>
-
   <div class="form">
     <h1 class="logo">fWatch</h1>
     <form class="login-form">
@@ -15,12 +14,20 @@
         placeholder="Введите пароль"
         show-password
       />
-      
+
       <el-button type="primary" class="btn-enter">Вход</el-button>
     </form>
     <div class="links-container">
       <div>
-        <el-link type="primary">Забыли пароль?</el-link>
+        <button
+          v-for="(_, tab) in tabs"
+          :key="tab"
+          :class="[{ active: currentTab === tab }]"
+          @click="(currentTab = tab), console.log(currentTab)"
+        >
+          123
+        </button>
+        <el-link type="primary">123</el-link>
       </div>
       <div><el-link type="primary">Зарегистрироваться</el-link></div>
     </div>
@@ -31,8 +38,6 @@
 import { ref } from "vue";
 const inputPass = ref("");
 const inputLogin = ref("");
-
-
 </script>
 
 <style scoped></style>
