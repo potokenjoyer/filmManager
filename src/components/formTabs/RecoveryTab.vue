@@ -2,15 +2,14 @@
   <div class="form">
     <h1 class="logo">fWatch</h1>
     <p class="recovery">Для восстановления доступа введите e-mail</p>
-    <form class="login-form" :click="checkValue">
+    <form class="login-form">
       <el-input
         placeholder="Введите email"
         class="input-login"
         v-model="emailRecovery"
       />
-
-      <el-button type="primary" class="btn-enter">Отправить</el-button>
     </form>
+    <el-button type="primary" class="btn-enter">Отправить</el-button>
     <div class="links-container">
       <div>
         <el-link type="primary">Вернуться</el-link>
