@@ -1,35 +1,11 @@
 <template>
-<div>
- 
-  <button
-       v-for="(_, tab) in tabs"
-       :key="tab"
-       :class="[{ active: currentTab === tab }]"
-       @click="currentTab = tab, console.log(currentTab)"
-     >123
-    </button>
-	  <component :is="tabs[currentTab]" class="tab"></component>
-</div>
-
+  <div class="form">
+    <h1 class="logo">fWatch</h1>
+    <router-view></router-view>
+  </div>
 </template>
 
-<script setup>
-import { ref } from "vue";
-import LoginTab from "@/components/formTabs/LoginTab.vue";
-import RecoveryTab from "@/components/formTabs/RecoveryTab.vue";
-import ReturnTab from "@/components/formTabs/ReturnTab.vue";
-
-const currentTab = ref("LoginTab");
-
-const tabs = {
-  LoginTab,
-  RecoveryTab,
-  ReturnTab,
-};
-
-
-
-</script>
+<script setup></script>
 
 <style>
 .recovery {
@@ -70,14 +46,13 @@ const tabs = {
   padding-bottom: 10px;
   text-align: center;
   border-radius: 10px;
-  width:550px ;
-  height: 361px;
+  width: 550px;
 }
 .logo {
   font-size: 42px;
   font-weight: bold;
   font-family: Roboto;
   color: #409eff;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 </style>
