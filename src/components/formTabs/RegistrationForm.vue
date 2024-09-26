@@ -47,24 +47,21 @@ const userName = ref("");
 const login = ref("");
 
 const router = useRouter();
-const route = useRoute();
 
-function pushWithQuery() {
-  router.push({
-    name: "complete",
-  });
-}
+  async function registration() {
+    const responce = await axios.post(
+      "http://localhost:3031/api/auth/register",
+      {
+        email: email.value,
+        password: password.value,
+      }
+    );
+    console.log(responce);
+    router.push({
+      name: "complete",
+    });
+  }
 
-async function registration() {
-  const responce = await axios.post("http://localhost:3031/api/auth/register", {
-    email: email.value,
-    password: password.value,
-  });
-  console.log(responce);
-  this.router.push({
-    name: "complete",
-  });
-}
 </script>
 
 <style scoped></style>
