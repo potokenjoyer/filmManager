@@ -13,7 +13,7 @@
       show-password
     />
 
-    <el-button type="primary" class="btn-enter">Вход</el-button>
+    <el-button type="primary" class="btn-enter" @click="login">Вход</el-button>
   </form>
   <div class="links-container">
     <div>
@@ -30,9 +30,22 @@
 </template>
 
 <script setup>
+import axios from "axios";
 import { ref } from "vue";
 const inputLogin = ref("");
 const inputPass = ref("");
+
+async function login() {
+const responce = await axios.post('http://localhost:3031/api/auth/login', {
+  email: inputLogin.value, password:inputPass.value
+})
+console.log(responce)
+}
+
+
+
+
+
 </script>
 
 <style scoped></style>

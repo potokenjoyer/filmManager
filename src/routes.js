@@ -25,6 +25,7 @@ export default createRouter({
         },
         {
           path: "/completereg",
+          name: 'complete',
           component: CompleteRegForm,
         },
         {
