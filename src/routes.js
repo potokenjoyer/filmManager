@@ -5,7 +5,8 @@ import RegistrationForm from "./components/formTabs/RegistrationForm.vue";
 import AuthForm from "./components/formTabs/AuthForm.vue";
 import CompleteRegForm from "./components/formTabs/CompleteRegForm.vue";
 import RecoveryForm from "./components/formTabs/RecoveryForm.vue";
-import CompleteRecoveryForm from "./components/formTabs/CompleteRecoveryForm.vue"
+import CompleteRecoveryForm from "./components/formTabs/CompleteRecoveryForm.vue";
+import MainPage from "./components/mainSystem/MainPage.vue";
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -25,7 +26,7 @@ export default createRouter({
         },
         {
           path: "/completereg",
-          name: 'complete',
+          name: "complete",
           component: CompleteRegForm,
         },
         {
@@ -37,6 +38,11 @@ export default createRouter({
           component: CompleteRecoveryForm,
         },
       ],
+    },
+    {
+      path: "/films",
+      name: "films",
+      component: MainPage,
     },
   ],
 });

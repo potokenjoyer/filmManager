@@ -34,12 +34,18 @@ import axios from "axios";
 import { ref } from "vue";
 const inputLogin = ref("");
 const inputPass = ref("");
+import { useRouter } from "vue-router";
+const router = useRouter();
+
 
 async function login() {
 const responce = await axios.post('http://localhost:3031/api/auth/login', {
   email: inputLogin.value, password:inputPass.value
 })
 console.log(responce)
+router.push({
+    name: "films",
+  });
 }
 
 
