@@ -29,7 +29,11 @@
       >
     </div>
     <div style="padding-bottom: 20px">
-      <el-button type="primary" class="btn-enter" @click="$router.push('/')"
+      <el-button
+        type="primary"
+        :icon="ArrowLeft"
+        class="btn-enter"
+        @click="$router.push('/')"
         >Вернуться</el-button
       >
     </div>
@@ -38,8 +42,9 @@
 
 <script setup>
 import { ref } from "vue";
-import { useRouter, useRoute } from "vue-router";
+import { useRouter } from "vue-router";
 import axios from "axios";
+import { ArrowLeft } from "@element-plus/icons-vue";
 
 const email = ref("");
 const password = ref("");
@@ -48,20 +53,16 @@ const login = ref("");
 
 const router = useRouter();
 
-  async function registration() {
-    const responce = await axios.post(
-      "http://localhost:3031/api/auth/register",
-      {
-        email: email.value,
-        password: password.value,
-      }
-    );
-    console.log(responce);
-    router.push({
-      name: "complete",
-    });
-  }
-
+async function registration() {
+  const responce = await axios.post("http://localhost:3031/api/auth/register", {
+    email: email.value,
+    password: password.value,
+  });
+  console.log(responce);
+  router.push({
+    name: "complete",
+  });
+}
 </script>
 
 <style scoped></style>

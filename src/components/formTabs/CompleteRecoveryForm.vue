@@ -6,13 +6,19 @@
   </form>
   <div class="links-container">
     <div>
-      <el-button type="primary" class="btn-enter" @click="$router.push('/')"
+      <el-button
+        type="primary"
+        :icon="ArrowLeft"
+        class="btn-enter"
+        @click="$router.push('/')"
         >Вернуться</el-button
       >
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ArrowLeft } from "@element-plus/icons-vue";
+</script>
 
 <style scoped></style>

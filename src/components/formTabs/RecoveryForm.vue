@@ -11,13 +11,19 @@
     />
   </form>
   <div class="links-container">
-
     <div>
-      <el-button type="primary" class="btn-enter" @click="$router.push('/completerecovery')"
-        >Отправить</el-button
-      >
-      <el-button type="primary" class="btn-enter" @click="$router.push('/')"
+      <el-button
+        type="primary"
+        :icon="ArrowLeft"
+        class="btn-enter"
+        @click="$router.push('/')"
         >Вернуться</el-button
+      >
+      <el-button
+        type="primary"
+        class="btn-enter"
+        @click="$router.push('/completerecovery')"
+        >Отправить</el-button
       >
     </div>
   </div>
@@ -25,6 +31,7 @@
 
 <script setup>
 import { ref } from "vue";
+import { ArrowLeft } from "@element-plus/icons-vue";
 const emailRecovery = ref("");
 </script>
 

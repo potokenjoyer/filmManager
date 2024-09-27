@@ -13,7 +13,7 @@
       show-password
     />
 
-    <el-button type="primary" class="btn-enter" @click="login">Вход</el-button>
+    <el-button type="primary" class="btn-enter" @click="login" size="large">Вход</el-button>
   </form>
   <div class="links-container">
     <div>
