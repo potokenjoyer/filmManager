@@ -2,78 +2,78 @@
   <p
     v-if="isSuccessful"
     class="recovery"
-    style="font-size: 22px; padding-bottom: 20px"
-  >
-  Вы успешно зарегистрированы
+    style="font-size: 22px; padding-bottom: 20px">
+    Вы успешно зарегистрированы
   </p>
   <template v-else>
     <h2 style="color: #409eff; padding-bottom: 15px">
       Заполните форму для регистрации
     </h2>
-    <el-input
+    <ElInput
       v-model="userName"
       class="input-login"
-      placeholder="Как вас зовут?"
-    />
+      placeholder="Как вас зовут?" />
 
-    <el-input
+    <ElInput
       v-model="firstName"
       class="input-login"
-      placeholder="Первое имя"
-    />
-    <el-input
+      placeholder="Первое имя" />
+    <ElInput
       v-model="email"
       class="input-login"
-      placeholder="Введите вашу почту"
-    />
+      placeholder="Введите вашу почту" />
 
-    <el-input
+    <ElInput
       v-model="password"
       class="input-login"
-      placeholder="Придумайте пароль"
-    />
+      placeholder="Придумайте пароль" />
     <div style="padding-bottom: 20px; padding-top: 10px">
-      <el-button class="btn-enter" type="primary" @click="registration">
+      <ElButton
+        class="btn-enter"
+        type="primary"
+        @click="registration">
         Зарегистрироваться
-      </el-button>
+      </ElButton>
     </div>
   </template>
 
   <div style="padding-bottom: 20px">
-    <el-button
+    <ElButton
       class="btn-enter"
       type="primary"
       :icon="ArrowLeft"
-      @click="$router.push({ name: 'login' })"
-    >
+      @click="$router.push({ name: 'login' })">
       Вернуться
-    </el-button>
+    </ElButton>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { useRouter } from "vue-router";
-import axios from "axios";
-import { ArrowLeft } from "@element-plus/icons-vue";
-const $router = useRouter();
+  import axios from "axios";
+  import { ArrowLeft } from "@element-plus/icons-vue";
 
-const email = ref("");
-const password = ref("");
-const userName = ref("");
-const firstName = ref("");
-const isSuccessful = ref(false);
+  const $router = useRouter();
 
-async function registration() {
-  const response = await axios.post("http://localhost:3031/api/auth/register", {
-    email: email.value,
-    password: password.value,
-    firstName: firstName.value,
-    username: userName.value,
-  });
-  console.log(response);
-  isSuccessful.value = true;
-}
+  const email = ref("");
+  const password = ref("");
+  const userName = ref("");
+  const firstName = ref("");
+
+  const isSuccessful = ref(false);
+
+  async function registration() {
+    const response = await axios.post(
+      "http://localhost:3031/api/auth/register",
+      {
+        email: email.value,
+        password: password.value,
+        firstName: firstName.value,
+        username: userName.value,
+      }
+    );
+    console.log(response);
+    isSuccessful.value = true;
+  }
 </script>
 
 <style scoped></style>
