@@ -1,6 +1,6 @@
 <template>
     <div>
-<h1 style="color: black;">hello!</h1>
+<h1 style="color: black;">salam aleykym!</h1>
     </div>
 </template>
 

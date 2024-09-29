@@ -8,6 +8,9 @@ export const authRoutes = [
   {
     path: "/",
     name: "auth",
+    redirect: {
+      name: "login",
+    },
     component: LoginPage,
     children: [
       {

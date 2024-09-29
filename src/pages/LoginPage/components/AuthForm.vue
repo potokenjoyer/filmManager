@@ -21,7 +21,7 @@
     <div>
       <ElLink
         type="primary"
-        @click="$router.push({ name: 'login' })">
+        @click="$router.push({ name: 'pass-recovery' })">
         Забыли пароль?
       </ElLink>
     </div>
@@ -37,7 +37,7 @@
 
 <script lang="ts" setup>
   import axios from "axios";
-  
+
   const $router = useRouter();
 
   const email = ref("");

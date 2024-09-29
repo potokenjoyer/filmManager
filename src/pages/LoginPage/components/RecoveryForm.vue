@@ -23,7 +23,7 @@
         class="btn-enter"
         type="primary"
         :icon="ArrowLeft"
-        @click="$router.push({ name: '' })">
+        @click="$router.push({ name: 'login' })">
         Вернуться
       </ElButton>
       <ElButton
@@ -42,7 +42,7 @@
   import axios from "axios";
 
   const email = ref("");
-  
+
   const newPassword = ref("");
 
   const isSuccessful = ref(false);
