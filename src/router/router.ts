@@ -3,5 +3,5 @@ import routes from "./routes";
 
 export default createRouter({
   history: createWebHashHistory(),
-  routes: routes as RouteRecordRaw[],
+  routes: routes as unknown as RouteRecordRaw[],
 });
