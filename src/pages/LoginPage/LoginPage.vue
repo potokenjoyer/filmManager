@@ -1,11 +1,17 @@
 <template>
+  <div class="content-wrapper">
   <div class="form">
     <h1 class="logo">fWatch</h1>
     <RouterView></RouterView>
   </div>
+</div>
 </template>
 
 <style>
+.content-wrapper{
+  display: flex;
+  align-items: center;
+}
   .recovery {
     color: #409eff;
     padding-bottom: 10px;
@@ -38,7 +44,6 @@
     width: 300px;
   }
   .form {
-    position: relative;
     background: rgb(16, 16, 16);
     padding: 45px;
     padding-bottom: 10px;

@@ -1,4 +1,5 @@
 <template>
+
   <p
     v-if="isSuccessful"
     class="recovery"
@@ -46,6 +47,7 @@
       Вернуться
     </ElButton>
   </div>
+
 </template>
 
 <script setup>
