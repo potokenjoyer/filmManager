@@ -24,6 +24,11 @@ export const authRoutes = [
         name: "registration",
       },
       {
+        path: "/registration",
+        component: RegistrationForm,
+        name: "registration",
+      },
+      {
         path: "/recovery",
         component: RecoveryForm,
         name: "pass-recovery",
