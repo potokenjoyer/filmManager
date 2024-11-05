@@ -9,6 +9,7 @@
         <ElLink
           class="link"
           type="primary"
+          @click="$router.push({ name: 'films' })"
           :class="{ 'active-link': isActiveRoute('/films') }"
         >
           ФИЛЬМЫ
@@ -21,14 +22,7 @@
         >
           ЖАНРЫ
         </ElLink>
-        <ElLink
-          class="link"
-          type="primary"
-          @click="$router.push({ name: 'actors' })"
-          :class="{ 'active-link': isActiveRoute('/actors') }"
-        >
-          АКТЕРЫ
-        </ElLink>
+        <ElLink class="link" type="primary" :class="{ 'active-link': isActiveRoute('/actors') }"> АКТЕРЫ </ElLink>
         <ElLink
           class="link"
           type="primary"
