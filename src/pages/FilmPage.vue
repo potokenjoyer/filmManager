@@ -6,10 +6,10 @@
     </div>
     <div class="link-container">
       <div class="header">
-        <ElLink class="link" type="primary"> Фильмы </ElLink>
-        <ElLink class="link" type="primary"> Жанры </ElLink>
-        <ElLink class="link" type="primary"> Актеры </ElLink>
-        <ElLink class="link" type="primary" @click="$router.push({name:'login'})"> Выйти </ElLink>
+        <ElLink class="link" type="primary"> ФИЛЬМЫ </ElLink>
+        <ElLink class="link" type="primary"> ЖАНРЫ </ElLink>
+        <ElLink class="link" type="primary"> АКТЕРЫ </ElLink>
+        <ElLink class="link" type="primary" @click="$router.push({name:'login'})"> ВЫЙТИ </ElLink>
       </div>
     </div>
   </div>
@@ -48,10 +48,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
-
 }
 .link {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .logo {

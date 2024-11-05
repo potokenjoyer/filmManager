@@ -1,13 +1,26 @@
 <template>
   <div class="content-wrapper">
   <div class="form">
-    <h1 class="logo">fWatch</h1>
+    <img src="/src/images/logo.png" class="logo" />
+    <h1 class="logo-text">FWATCH</h1>
     <RouterView></RouterView>
   </div>
 </div>
 </template>
 
 <style>
+
+.logo-text {
+  font-family: "Oswald";
+  font-size: 40px;
+  color: #409eff;
+  padding-bottom: 3%;
+}
+.logo {
+  width: 13%;
+  padding-bottom: 0px;
+}
+
 .content-wrapper{
   display: flex;
   align-items: center;

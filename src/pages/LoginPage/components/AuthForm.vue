@@ -1,34 +1,30 @@
 <template>
-  <ElInput
-    v-model="email"
-    class="input-login"
-    placeholder="Введите email" />
+  <ElInput v-model="email" class="input-login" placeholder="Введите email" />
   <ElInput
     v-model="pass"
     class="input-password"
     type="password"
     placeholder="Введите пароль"
-    show-password />
+    show-password
+    @keydown="login"
+  />
   <ElButton
     type="primary"
     class="btn-enter"
     size="large"
-    @click="login">
+    @click="login"
+  >
     Вход
   </ElButton>
 
   <div class="links-container">
     <div>
-      <ElLink
-        type="primary"
-        @click="$router.push({ name: 'pass-recovery' })">
+      <ElLink type="primary" @click="$router.push({ name: 'pass-recovery' })">
         Забыли пароль?
       </ElLink>
     </div>
     <div>
-      <ElLink
-        type="primary"
-        @click="$router.push({ name: 'registration' })">
+      <ElLink type="primary" @click="$router.push({ name: 'registration' })">
         Зарегистрироваться
       </ElLink>
     </div>
@@ -36,22 +32,22 @@
 </template>
 
 <script lang="ts" setup>
-  import axios from "axios";
+import axios from "axios";
 
-  const $router = useRouter();
+const $router = useRouter();
 
-  const email = ref("");
-  const pass = ref("");
+const email = ref("");
+const pass = ref("");
 
-  async function login() {
-    const response = await axios.post("http://localhost:3031/api/auth/login", {
-      email: email.value,
-      password: pass.value,
-    });
-    $router.push({
-      name: "films",
-    });
-  }
+async function login() {
+  const response = await axios.post("http://localhost:3031/api/auth/login", {
+    email: email.value,
+    password: pass.value,
+  });
+  $router.push({
+    name: "films",
+  });
+}
 </script>
 
 <style scoped></style>
