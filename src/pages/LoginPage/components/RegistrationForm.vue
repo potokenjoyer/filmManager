@@ -29,6 +29,7 @@
       type="password"
       show-password
       placeholder="Придумайте пароль"
+      @keydown.enter="registration"
     />
     <div style="padding-bottom: 20px; padding-top: 10px">
       <ElButton class="btn-enter" type="primary" @click="registration">
@@ -43,6 +44,7 @@
       type="primary"
       :icon="ArrowLeft"
       @click="$router.push({ name: 'login' })"
+      
     >
       Вернуться
     </ElButton>
@@ -69,7 +71,6 @@ async function registration() {
     firstName: firstName.value,
     username: userName.value,
   });
-  console.log(response);
   isSuccessful.value = true;
 }
 </script>
