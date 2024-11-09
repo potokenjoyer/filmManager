@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
     <div class="logo-container">
-      <img src="../images/logo.png" class="logo" />
-      <h1 class="logo-text">FWATCH</h1>
+      <img src="../images/logo_text.png" class="logo" />
+      <h1 class="logo-text"></h1>
     </div>
     <div class="link-container">
       <div class="header">
@@ -91,7 +91,7 @@ const isActiveRoute = (path) => {
 }
 
 .logo {
-  width: 13%;
+  width: 80%;
   padding-bottom: 0px;
 }
 </style>
