@@ -1,8 +1,10 @@
 <template>
     <div class="wrapper">
       <div class="logo-container">
-        <img src="../images/logo.png" class="logo" />
-        <h1 class="logo-text">FWATCH</h1>
+        <a href="">
+      <img src="../images/logo_text.png" class="logo" />
+    </a>
+
       </div>
       <div class="link-container">
         <div class="header">
@@ -86,8 +88,8 @@
   }
   
   .logo {
-    width: 13%;
-    padding-bottom: 0px;
-  }
+  width: 70%;
+  padding-bottom: 0px;
+}
   </style>
   
