@@ -1,8 +1,8 @@
-import FilmPage from "../pages/FilmPage.vue";
-import { ref } from "vue";
 import { defineStore } from "pinia";
+import { ref } from "vue";
 
-export const useFilmsStore = defineStore('', ()=>{
+
+export const useFilmsStore = defineStore('films', ()=>{
     const films = ref([])
     let id = 0
     function addFilm(){
