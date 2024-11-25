@@ -58,42 +58,12 @@ const isActiveRoute = (path) => {
 </script>
 
 <style lang="scss" scoped>
-/* Основные стили для логотипа */
-.logo-container {
-  position: relative;
-  display: inline-block;
-}
 
-.logo {
-  // width: 50%;
-  // height: auto;
-  cursor: pointer;
-}
 
-/* Стили для выпадающего меню */
-.dropdown-menu {
-  position: absolute;
-  top: 100%; /* Положение меню относительно логотипа */
-  left: 0;
-  background-color: #0d0d0d;
-  min-width: 150px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
 
-/* Элементы внутри выпадающего меню */
-.dropdown-menu a {
-  color: #409eff;
-  border: 1px solid #409eff;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
 
-/* Стиль при наведении на элементы меню */
-.dropdown-menu a:hover {
-  background-color: #ddd;
-}
+
+
 .add_film {
   display: flex;
 }
