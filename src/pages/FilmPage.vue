@@ -42,7 +42,11 @@
       </div>
     </div>
   </div>
-  <div>hello</div>
+  <div class="films-wrapper">
+    <button class="btn-add-film">
+     +
+    </button>
+  </div>
 </template>
 
 <script setup>
@@ -61,6 +65,21 @@ const films = ref("");
 </script>
 
 <style lang="scss" scoped>
+
+.films-wrapper{
+  margin: 0 auto;
+  padding-top: 6%;
+  display: flex;
+  width: 80%;
+}
+.btn-add-film{
+  width: 300px;
+  height: 400px;
+  background-color: #0d0d0d;
+  border: 1px solid #409eff;
+  font-size: 100px;
+  color: #242424;
+}
 .wrapper {
   margin: 0 auto;
   font-weight: normal;
