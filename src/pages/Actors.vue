@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+  <div class="wrapper-header">
     <div class="logo-container">
       <a href="">
       <img src="../images/logo_text.png" class="logo" />
@@ -34,6 +35,8 @@
       </div>
     </div>
   </div>
+</div>
+  
 </template>
 
 <script setup>
@@ -46,17 +49,25 @@ const isActiveRoute = (path) => {
 </script>
 
 <style lang="scss" scoped>
-.active-link {
-  border-bottom: 1px solid #409eff;
+  .wrapper{
+  margin: 0 auto;
+  font-weight: normal;
+  display: flex; 
+  justify-content: center;
+  width: 100%;
 }
-
-.wrapper {
+.wrapper-header {
   display: flex;
   width: 80%;
   justify-content: space-between;
   padding-top: 2%;
   height: 10%;
 }
+.active-link {
+  border-bottom: 1px solid #409eff;
+}
+
+
 
 .logo-text {
   font-family: "Oswald";

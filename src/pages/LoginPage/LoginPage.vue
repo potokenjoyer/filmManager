@@ -1,4 +1,5 @@
 <template>
+  <div class="main-content">
   <div class="content-wrapper">
   <div class="form">
     <img src="/src/images/logo.png" class="logo" />
@@ -6,10 +7,18 @@
     <RouterView></RouterView>
   </div>
 </div>
+</div>
 </template>
 
 <style>
-
+.main-content{
+  margin: 0 auto;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 .logo-text {
   font-family: "Oswald";
   font-size: 40px;

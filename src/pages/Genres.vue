@@ -1,5 +1,6 @@
 <template>
-    <div class="wrapper">
+  <div class="wrapper">
+    <div class="wrapper-header">
       <div class="logo-container">
         <a href="">
       <img src="../images/logo_text.png" class="logo" />
@@ -36,6 +37,7 @@
         </div>
       </div>
     </div>
+  </div>
   </template>
   
   <script setup>
@@ -51,14 +53,20 @@
   .active-link {
     border-bottom: 1px solid #409eff;
   }
-  
-  .wrapper {
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
-    padding-top: 2%;
-    height: 10%;
-  }
+  .wrapper{
+  margin: 0 auto;
+  font-weight: normal;
+  display: flex; 
+  justify-content: center;
+  width: 100%;
+}
+.wrapper-header {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  padding-top: 2%;
+  height: 10%;
+}
   
   .logo-text {
     font-family: "Oswald";

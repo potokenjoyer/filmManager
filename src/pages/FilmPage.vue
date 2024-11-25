@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+  <div class="wrapper-header">
     <div class="logo-container">
       <a href="">
         <img src="../images/logo_text.png" class="logo" />
@@ -31,16 +32,16 @@
           АКТЕРЫ
         </ElLink>
         <ElLink
-            class="link"
-            type="primary"
-            @click="$router.push({ name: 'login' })"
-          >
-            ВЫЙТИ
-          </ElLink>
+          class="link"
+          type="primary"
+          @click="$router.push({ name: 'login' })"
+        >
+          ВЫЙТИ
+        </ElLink>
       </div>
     </div>
   </div>
-
+</div>
 
 </template>
 
@@ -48,21 +49,36 @@
 import { useFilmsStore } from "../stores/filmsStores";
 import { ref } from "vue";
 
-
 const $route = useRoute();
 console.log($route.path);
 
 const isActiveRoute = (path) => {
   return $route.path === path;
 };
+
+const notesStore = useFilmsStore();
+const films = ref("");
 </script>
 
 <style lang="scss" scoped>
-
-
-
-
-
+.wrapper{
+  margin: 0 auto;
+  font-weight: normal;
+  display: flex; 
+  justify-content: center;
+  width: 100%;
+}
+.wrapper-header {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  padding-top: 2%;
+  height: 10%;
+}
+// .main-content{
+//   display: flex;
+//   align-items: center;
+// }
 
 .add_film {
   display: flex;
@@ -72,13 +88,7 @@ const isActiveRoute = (path) => {
   border-bottom: 1px solid #409eff;
 }
 
-.wrapper {
-  display: flex;
-  width: 80%;
-  justify-content: space-between;
-  padding-top: 2%;
-  height: 10%;
-}
+
 
 .logo-text {
   font-family: "Oswald";
