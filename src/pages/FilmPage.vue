@@ -42,10 +42,13 @@
       </div>
     </div>
   </div>
-  <div class="films-wrapper">
-    <button class="btn-add-film">
-     +
-    </button>
+
+  <div class="content-wrapper">
+      <div class="films-wrapper">
+        <div class="add-btn">
+          <el-button type="primary" plain> ДОБАВИТЬ ФИЛЬМ </el-button>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -66,13 +69,23 @@ const films = ref("");
 
 <style lang="scss" scoped>
 
-.films-wrapper{
-  margin: 0 auto;
-  padding-top: 6%;
+.content-wrapper {
   display: flex;
+
   width: 80%;
+  margin: 0 auto;
+  padding-top: 5%;
+
 }
-.btn-add-film{
+.add-btn {
+  display: flex;
+  vertical-align: middle;
+  padding-top: 5%;
+
+
+}
+
+.btn-add-film {
   width: 300px;
   height: 400px;
   background-color: #0d0d0d;
