@@ -5,6 +5,9 @@ export const useFilmsStore = defineStore("films", () => {
   let id = 0;
   const films = ref([]);
 
+  // переменная для отображения модального окна
+  const visible = ref(false);
+
   function addFilm(newFilm, genreFilm, actors) {
     if (newFilm && genreFilm != "") {
       films.value.push({
@@ -18,6 +21,7 @@ export const useFilmsStore = defineStore("films", () => {
     console.log(genreFilm);
     console.log(actors);
   }
+
   return {
     addFilm,
   };

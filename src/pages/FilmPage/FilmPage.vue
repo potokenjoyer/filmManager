@@ -44,52 +44,34 @@
   </div>
 
   <div class="content-wrapper">
-    <div class="films-wrapper">
-      <div class="add-btn">
-        <el-button
+    <el-button
           type="primary"
           plain
-          @click="notesStore.addFilm(newFilm, genreFilm, actors)"
+          @click="showModalWindowForm"
         >
-          ДОБАВИТЬ ФИЛЬМ
+          Добавить фильм
         </el-button>
-      </div>
-    </div>
   </div>
 
   <div>
-    <ElInput
-      v-model="newFilm"
-      placeholder="Введите название фильма"
-      @keydown.enter="notesStore.addFilm(newFilm, genreFilm, actors)"
-    />
-    <h1>Название фильмы: {{ newFilm }}</h1>
-    <ElInput
-      v-model="genreFilm"
-      placeholder="Введите жанр фильма"
-      @keydown.enter="notesStore.addFilm(newFilm, genreFilm, actors)"
-    />
-    <h1>Жанры фильма: {{ genreFilm }}</h1>
-    <ElInput
-      v-model="actors"
-      placeholder="Актеры"
-      @keydown.enter="notesStore.addFilm(newFilm, genreFilm, actors)"
-    />
-    <h1>Актеры фильма: {{ actors }}</h1>
+    <ModalWindowForm v-if="filmsStores.visible" />
   </div>
 </template>
 
 <script setup>
 import { useFilmsStore } from "../../stores/filmsStores";
 import { ref } from "vue";
+import ModalWindowForm from "./components/ModalWindowForm.vue";
 
-const notesStore = useFilmsStore();
+const filmsStores = useFilmsStore();
+//visible для модального окна
 
-// inputs для будущей формы
-const newFilm = ref("");
-const genreFilm = ref("");
-const actors = ref("");
+function showModalWindowForm(){
+  filmsStores.visible.value= !filmsStores.visible.value 
+console.log(visible)
+}
 
+// роутер 
 const $route = useRoute();
 
 //чисто на тест смотреть роутинг (потом удали)
@@ -103,8 +85,7 @@ const isActiveRoute = (path) => {
 <style lang="scss" scoped>
 .content-wrapper {
   display: flex;
-
-  width: 80%;
+  width: 80%; 
   margin: 0 auto;
   padding-top: 5%;
 }
