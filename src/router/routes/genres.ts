@@ -1,4 +1,4 @@
-import Genres from "@/pages/Genres.vue";
+import Genres from "@/pages/FilmPage/Genres.vue";
 
 import { AppRouteRecord } from "../types";
 

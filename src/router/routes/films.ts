@@ -1,4 +1,4 @@
-import FilmPage from "@/pages/FilmPage.vue";
+import FilmPage from "@/pages/FilmPage/FilmPage.vue";
 
 import { AppRouteRecord } from "../types";
 
