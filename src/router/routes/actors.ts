@@ -1,4 +1,4 @@
-import Actors from "@/pages/Actors.vue";
+import Actors from "@/pages/FilmPage/Actors.vue";
 import { AppRouteRecord } from "../types";
 
 export const actorsRoutes = [

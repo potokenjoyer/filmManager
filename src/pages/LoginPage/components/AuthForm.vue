@@ -6,7 +6,7 @@
     type="password"
     placeholder="Введите пароль"
     show-password
-    @keydown="login"
+    @keydown.enter="login"
   />
   <ElButton
     type="primary"
