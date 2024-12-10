@@ -50,7 +50,7 @@
   </div>
 
   <div>
-    <ModalWindowForm v-if="visible" />
+    <ModalWindowForm @closeModalWindow="visibleUpdate" v-if="visible"  />
   </div>
 </template>
 
@@ -62,9 +62,12 @@ import ModalWindowForm from "./components/ModalWindowForm.vue";
 const filmsStores = useFilmsStore();
 //visible для модального окна
 const visible = ref(false)
+function visibleUpdate(visibleFromButton){
+  visible.value = visibleFromButton
+}
+
 function showModalWindowForm() {
  visible.value = true
-  console.log(visible);
 }
 
 // роутер

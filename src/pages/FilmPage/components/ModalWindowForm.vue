@@ -2,7 +2,7 @@
   <div class="model">
     <div class="modal_main">
       <div class="close_btn">
-        <el-button type="danger" @click="closeModalWindowForm">X</el-button>
+        <el-button type="danger" @click="closeModal">X</el-button>
       </div>
       <h1 class="modal_title">Заполните форму</h1>
       <ElInput
@@ -36,13 +36,16 @@
 </template>
 <script setup>
 import { ref } from "vue";
+import { defineEmits } from "vue";
 
 //store
 const filmsStores = useFilmsStore();
 
-function closeModalWindowForm() {
-  visible.value = !visible.value;
-  console.log(visible.value);
+//emit
+const emit = defineEmits(["closeModalWindow"]);
+
+function closeModal() {
+  emit("closeModalWindow", false);
 }
 
 //для инпутов
