@@ -44,17 +44,13 @@
   </div>
 
   <div class="content-wrapper">
-    <el-button
-          type="primary"
-          plain
-          @click="showModalWindowForm"
-        >
-          Добавить фильм
-        </el-button>
+    <el-button type="primary" plain @click="showModalWindowForm">
+      Добавить фильм
+    </el-button>
   </div>
 
   <div>
-    <ModalWindowForm v-if="filmsStores.visible" />
+    <ModalWindowForm v-if="visible" />
   </div>
 </template>
 
@@ -65,13 +61,13 @@ import ModalWindowForm from "./components/ModalWindowForm.vue";
 
 const filmsStores = useFilmsStore();
 //visible для модального окна
-
-function showModalWindowForm(){
-  filmsStores.visible.value= !filmsStores.visible.value 
-console.log(visible)
+const visible = ref(false)
+function showModalWindowForm() {
+ visible.value = true
+  console.log(visible);
 }
 
-// роутер 
+// роутер
 const $route = useRoute();
 
 //чисто на тест смотреть роутинг (потом удали)
@@ -85,7 +81,7 @@ const isActiveRoute = (path) => {
 <style lang="scss" scoped>
 .content-wrapper {
   display: flex;
-  width: 80%; 
+  width: 80%;
   margin: 0 auto;
   padding-top: 5%;
 }

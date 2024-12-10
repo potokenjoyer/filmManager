@@ -6,7 +6,7 @@ export const useFilmsStore = defineStore("films", () => {
   const films = ref([]);
 
   // переменная для отображения модального окна
-  const visible = ref(false);
+
 
   function addFilm(newFilm, genreFilm, actors) {
     if (newFilm && genreFilm != "") {
